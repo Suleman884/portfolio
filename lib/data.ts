@@ -6,7 +6,7 @@ export const profile = {
   email: "sulemanashiq984@gmail.com",
   phone: "+92 303 4331364",
   linkedin: "https://www.linkedin.com/in/muhammad-suleman-804225178/",
-  resumeUrl: "/Muhammad_Suleman_Resume.pdf",
+  resumeUrl: "/Suleman_Senior_Software_Engg_Resume.pdf",
   bio: "Senior Software Engineer with 6+ years building high-performance React Native, React.js, and Next.js applications across fintech, eSIM/telecom, edtech, e-commerce, and media. Proven record leading teams and delivering iOS, Android, and Web products to global users.",
   stats: [
     { label: "Years Experience", value: "6+" },
