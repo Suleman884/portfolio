@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/data";
+import TiltCard from "@/components/TiltCard";
 
 export default function Projects() {
   return (
@@ -37,8 +38,8 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl"
             >
+              <TiltCard className="group relative overflow-hidden rounded-3xl">
               {/* Gradient border background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-60`} />
               <div className="absolute inset-[1px] rounded-3xl bg-ink-900" />
@@ -128,6 +129,7 @@ export default function Projects() {
               <div
                 className={`absolute -inset-1 bg-gradient-to-r ${project.accent} opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 -z-10`}
               />
+              </TiltCard>
             </motion.article>
           ))}
         </div>

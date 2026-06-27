@@ -15,7 +15,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neon-pink">03 //</span>
+            <span className="font-mono text-sm text-neon-pink">04 //</span>
             <div className="h-px flex-1 bg-gradient-to-r from-neon-pink/40 to-transparent" />
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-extrabold mb-16 tracking-tight">

@@ -46,11 +46,17 @@ body {
 
 /* ===== Gradient text utility ===== */
 .gradient-text {
-  background: var(--gradient-text);
+  background: linear-gradient(120deg, #00ffd1 0%, #a855f7 40%, #ff2d92 70%, #00ffd1 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  animation: text-shimmer 6s linear infinite;
+}
+
+@keyframes text-shimmer {
+  to { background-position: 200% center; }
 }
 
 .gradient-text-warm {
@@ -147,6 +153,18 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== Respect reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ===== Cursor blink ===== */

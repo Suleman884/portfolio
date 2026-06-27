@@ -19,7 +19,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neon-cyan">05 //</span>
+            <span className="font-mono text-sm text-neon-cyan">06 //</span>
             <span className="font-mono text-sm text-white/40">CONTACT</span>
           </div>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight leading-none">

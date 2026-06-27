@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { profile } from "@/lib/data";
 import { Code2, Zap, Globe, Users } from "lucide-react";
+import CountUp from "@/components/CountUp";
 
 const iconMap = [Code2, Zap, Globe, Users];
 
@@ -87,12 +88,21 @@ export default function About() {
               return (
                 <motion.div
                   key={stat.label}
-                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    delay: 0.3 + i * 0.12,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 16,
+                  }}
+                  whileHover={{ y: -6, scale: 1.03, transition: { duration: 0.2 } }}
                   className="gradient-border p-6 group"
                 >
-                  <Icon className="w-6 h-6 text-neon-cyan mb-4 group-hover:text-neon-violet transition-colors" />
+                  <Icon className="w-6 h-6 text-neon-cyan mb-4 transition-colors group-hover:text-neon-violet group-hover:animate-pulse" />
                   <div className="font-display text-3xl md:text-4xl font-extrabold gradient-text mb-1">
-                    {stat.value}
+                    <CountUp value={stat.value} />
                   </div>
                   <div className="text-sm text-white/50 font-mono">
                     {stat.label}

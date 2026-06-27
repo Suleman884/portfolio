@@ -5,6 +5,7 @@ import { ArrowRight, Download, Mail, MapPin, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { profile } from "@/lib/data";
 import { useEffect, useState } from "react";
+import Particles from "@/components/Particles";
 
 const roles = [
   "React Native Engineer",
@@ -49,6 +50,9 @@ export default function Hero() {
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-cyan-400/15 blur-[120px] animate-blob" style={{ animationDelay: "4s" }} />
         <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] rounded-full bg-pink-500/15 blur-[120px] animate-blob" style={{ animationDelay: "8s" }} />
       </div>
+
+      {/* Floating particles */}
+      <Particles count={30} />
 
       {/* Fade overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink-950/30 to-ink-950 pointer-events-none" />
@@ -175,7 +179,11 @@ export default function Hero() {
         <span className="text-xs font-mono text-white/30 tracking-widest">
           SCROLL
         </span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
+        <motion.div
+          animate={{ y: [0, 8, 0], opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent"
+        />
       </motion.div>
     </section>
   );

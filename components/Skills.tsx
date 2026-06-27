@@ -33,7 +33,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neon-amber">04 //</span>
+            <span className="font-mono text-sm text-neon-amber">05 //</span>
             <div className="h-px flex-1 bg-gradient-to-r from-neon-amber/40 to-transparent" />
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-extrabold mb-16 tracking-tight">
